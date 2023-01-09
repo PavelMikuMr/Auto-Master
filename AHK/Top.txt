@@ -1,0 +1,72 @@
+ОП                    Example                                    Why?
+–                     seranking -википедия                       Исключает слова из результатов поиска
+$/€                   SEO анализ $39                             Ищет цены на услуги или товары в указанной валюте
+*                     анализ *SEO/PPC                            Ищет ключи, между которыми есть одно или несколько слов
+” ”                   “SEO-инструменты на одной платформе”       Находит точное совпадение введенной фразы или слова
+OR или (|)            Анализ слов по параметрам OR подбор        Ищет контент, где используется один из указанных в запросе ключей
+AND                   оператор поиска AND Google                 Отображает результаты всех ключей (их может быть 2 и больше), которые объединены этим оператором
+in или to             $39 in евро                                Конвертирует валюту и числовые величины
+( )                  (SEO) seranking                             Группирует несколько запросов или операторов
+site:                site:seranking.ru seo-аудит                 Ищет страницы определенного сайта
+site: * –            site:*prom.ua -www                          Проверяет поддомены сайта. Позволяет узнать, проиндексированы на них страницы
+site: inanchor: –    inanchor:seranking.ru -site:seranking.ru    Находит безанкорные ссылки
+( ) inanchor: OR –   site:(inanchor:allo.ua OR inanchor:eldorado.ua) -site:seranking.ru -site:allo.ua -site:eldorado.ua Ищет страницы сайтов с брендовыми анкорами
+site: before:        site:allo.ua/blog before:2021-04-01         Находит на страницах блогов материалы до указанной даты публикации
+site: after: before: site:seranking.com/ru/blog after:2021-03-01 before:2020-04-01 Определяет периодичность публикаций материалов в блогах конкурентов
+cache:               cache:seranking.com/blog/what-is-seo/       Позволяет увидеть актуальный кэш страницы
+related:             related:https://seranking.com/ru/competitor-traffic-research.htm Ищет сайты с похожим контентом
+source:              seo source: vc                              Находит новости в Google News заданной тематики из конкретного новостного источника
+map:                 map:kyiv                                    Ищет запросы по картам
+define:              define:продвижение                          Находит значения слов, предлагая результаты выдачи из достоверных источников
+filetype:            поисковая оптимизация filetype:pdf          Ищет документы в соответствии с их расширением: pdf, doc, xls, ppt, txt, svf, avi, mov, а также архивы zip и rar и др
+site: filetype:      site:ozon.ru filetype:pdf                   Комбинация находит разные типы документов и файлов на конкретном сайте
+intext:              партнерская программа intext:seranking      Показывает страницы, которые содержат указанное слово в тексте
+inurl:               inurl:одностраничный сайт                   Показывает страницы, содержащие указанное слово в URL
+allinurl:            allinurl:индексация сайта                   Находит страницы, содержащие все указанные слова в URL
+..                   Каннский кинофестиваль 2019..2020           Показывает результаты по запросу за определенный промежуток времени
+
+
+MAIL.RU
+paveltrudov@mail.ru ( cfvceyu1198)
+zaka2013@mail.ru (Kot5612001198baron)
+       
+ GOOGLE
+zaka52711@gmail.com (Kot5612001198baronqwerty)
+pavelmikumr@gmail.com
+(Kot5612001198binary)
+
+ЯНДЕКС
+ 
+trudoffpav (Kot5612001198baron)
+mrltrue@yandex.ru (Kot5612001198baron)
+
+
+ iCloud
+paveltrudov@mail.ru (Kot5612001198baron)
+
+ Госуслуги
+89962475434 (Kot561200-1198baron)
+  Instagram
+mr_ltrue (Cfvceyu1198)
+
+  РЖД
+paveltrudov@mail.ru (Kot5612001198baron)
+
+Sliwbl.com
+Логин павел199811
+Пароль Kot5612001198baron
+
+
+artstation (Kot5612001198qwerty_)
+microsoft mrltrue@yandex.ru(Kot5612001198qwerty_)
+
+GItHub
+paveltrudov@mail.ru
+Kot5612001198baron (PavelMikuT)
+
+MEGa
+paveltrudov@mail.ru
+Kot5612001198baron (PavelMikuT)
+PlQMaJMag-G_wA2wWgsM8w
+
+
