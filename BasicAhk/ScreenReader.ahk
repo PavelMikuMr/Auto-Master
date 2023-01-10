@@ -31,7 +31,7 @@ return
 
 
 
-^#n::
+!0::
 ; XButton1::
 Menu MyMenu, Add,OpenApp, item1handler
 Menu MyMenu, Add,Screen, item2handler

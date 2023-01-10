@@ -437,6 +437,12 @@ return
 #IfWinActive 
 
 #IfWinActive ahk_exe Code.exe
+
+>^a::
+send,+!q
+return
+
+
 !space::
 send,+!q
 return

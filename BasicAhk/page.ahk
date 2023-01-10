@@ -346,8 +346,8 @@ return
     return
     !m::
     send,^+m
-    send,^+m
-    send,^+m
+    ; send,^+m
+    ; send,^+m
     return
 
     ; !,::
@@ -359,8 +359,8 @@ return
     ,::
     send, {PgDn}
     return
-    
     e::Delete
+    
     q::BackSpace
 
     ; home & end
