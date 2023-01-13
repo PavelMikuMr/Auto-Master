@@ -439,7 +439,10 @@ return
 #IfWinActive ahk_exe Code.exe
 
 >^a::
-send,+!q
+send,^+3
+return
+>^s::
+send,^+4
 return
 
 
@@ -469,9 +472,8 @@ return
 send,{&}
 return
 
-!s::
-send,{$}
-return
+
+
 !r::
 send,{`%}
 return
@@ -488,10 +490,14 @@ return
 
 #IfWinActive ahk_exe chrome.exe
 
+^/::
+send,{f7}
+return
+
 \::AppsKey
 return
 
-!i::
+^,::
 send,^f
 return
 

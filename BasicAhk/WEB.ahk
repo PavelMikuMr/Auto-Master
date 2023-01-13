@@ -69,6 +69,7 @@ Menu, VScde, Add, HTML/Css(ELEMENT), :MySubMenu6
 Menu, VScde, Add, Css LifeHack, MenuHandler
 Menu, MySubMenu8, Add, Vertical Iline, SubMenu8Label
 Menu, MySubMenu8, Add, Reset Value, SubMenu8Label
+Menu, MySubMenu8, Add, Useful things, SubMenu8Label
 Menu, VScde, Add, Css LifeHack, :MySubMenu8
 
 Menu, VScde, Add, Css Tools, MenuHandler
@@ -286,6 +287,8 @@ If (A_ThisMenuItemPos = 1) {
 	Run  C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\VerticalIline.png
 } else if (A_ThisMenuItemPos = 2) {
 	Run, C:\Users\pavel\GitHub\LIbrary\GIT\GItPrompt.cs
+} else if (A_ThisMenuItemPos = 3) {
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\DifferentUsefulthings\things.png
 }
 return
 

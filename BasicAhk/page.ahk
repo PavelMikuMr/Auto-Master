@@ -340,14 +340,14 @@ return
     return
 
 
-
+    
     m::
     send, {PgUp}
     return
     !m::
     send,^+m
-    ; send,^+m
-    ; send,^+m
+    send,^+m
+    send,^+m
     return
 
     ; !,::
@@ -887,7 +887,7 @@ return
     MouseGetPos, xpos, ypos
     PosX:=xpos/1.3
     PosY:=ypos/3
-    WinMove, ahk_exe chrome.exe ,, %xpos%,%PosY% , 640, 700
+    WinMove, ahk_exe chrome.exe ,, 10,386, 640, 700
     sleep 100
     return
 
@@ -936,18 +936,45 @@ return
 
 
     g::
+    ; OldClipboard:= Clipboard
+    ; Clipboard:= ""
+    ; Send, ^c ;copies selected text
+    ; ClipWait
+    ; Run http://www.google.com/search?q=%Clipboard%
+    ; Sleep 200
+    ; Clipboard:= OldClipboard
+    
+    ; KeyPressCountSelActor := 0 ;reset the count to zero
+    ; SetTimer, KeyPressMonitorSelActor, Off ;turn label off to stop monitoring for key     strokes
+    ; tooltip, ;turn tooltip off
     OldClipboard:= Clipboard
     Clipboard:= ""
     Send, ^c ;copies selected text
     ClipWait
+    Run chrome.exe
+    sleep,100
+	WinMove, ahk_exe chrome.exe ,, 10,370, 640, 700
     Run http://www.google.com/search?q=%Clipboard%
-    Sleep 200
-    Clipboard:= OldClipboard
-    
-    KeyPressCountSelActor := 0 ;reset the count to zero
-    SetTimer, KeyPressMonitorSelActor, Off ;turn label off to stop monitoring for key     strokes
-    tooltip, ;turn tooltip off
     Return
+
+    l::
+    OldClipboard:= Clipboard
+    Clipboard:= ""
+    Send, ^c ;copies selected text
+    ClipWait
+    Run chrome.exe
+    sleep,100
+	WinMove, ahk_exe chrome.exe ,, 10,370, 640, 700
+    Run %Clipboard% 
+    Return
+
+    ]::
+    ControlSend, , {Right}, ahk_class MozillaWindowClass
+    return 
+    [::
+    ControlSend, , {Left}, ahk_class MozillaWindowClass
+    return 
+    
 
 #If
 
@@ -1249,23 +1276,23 @@ return
 ;Terminal
 
 
-+!i::
++!o::
 list := ["time","year","people","way","day","man","woman","life","child","girl","salary","state","family","student","man","country","problem","hand","part","world","place","case","week","company","system","program","program","work","government","number","night","point","home","change","water","room","area","mother","story","fact","person","party","month","lot","right","study","book","eye","job","word","business","age","side","kind","head","house","service","friend","father","power","hour","game","line","end","member","law","car","name","team","minute","idea","kid","body","information","back","parent","face","office","level","door","person","teacher","education"]
 Random, Ran, 1, % List.MaxIndex()
 send % List[Ran]
 return
 
-+!o::
++!u::
 color := ["black","silver","white","maroon","red","man","purple","fuchsia","olive","","yellow","blue","aqua","teal","aliceblue","aqua","azure","beige","blue","brown","coral","cornsilk","cyan","darkkhaki","darkolivegreen","darkred","darkslategray","deeppink","dimgray","forestgreen","gold","lime","green","grey","indigo","lawngreen","lightcyan","lightgray","lightsalmon","linen","mediumorchid","mistyrose","olivedrab","palevioletred","pink","royalblue","seashell","snow","thistle","whitesmoke","yellow","skyblue"]
 Random, Ran, 1, % color.MaxIndex()
 send % color[Ran]
 return
 
-+!u::
-defenation := ["afraid","alive","angry ","basic","beautiful","big","boring","brave","bright","","busy","blue","calm","careful","cheap","clean","clever","cold","confident","constant","convenient","cool","correct","dark","deep","different","dirty","easy","empty","every","famous","fast","fat","fine","flat","free","lightcyan","fresh","full","funny","hard","healthy","heavy","important","large","legal","nice","lucky","old","poor","possible","recent"]
-Random, Ran, 1, % defenation.MaxIndex()
-send % defenation[Ran]
-return
+; +!u::
+; defenation := ["afraid","alive","angry ","basic","beautiful","big","boring","brave","bright","","busy","blue","calm","careful","cheap","clean","clever","cold","confident","constant","convenient","cool","correct","dark","deep","different","dirty","easy","empty","every","famous","fast","fat","fine","flat","free","lightcyan","fresh","full","funny","hard","healthy","heavy","important","large","legal","nice","lucky","old","poor","possible","recent"]
+; Random, Ran, 1, % defenation.MaxIndex()
+; send % defenation[Ran]
+; return
 
 +!n::
 nameList := ["James","John","Robert ","Michael","William","David","Richard","Charles","Joseph","Thomas","Christopher","Daniel","Paul","Mark","Donald","Kenneth","George","Steven","Edward","Brian","Ronald","Anthony","Kevin","Jason","Matthew","Danny","Timothy","Jose","Larry","Jeffrey","Frank","Scott","Eric","Stephen","Andrew","Raymond","Gregory","Joshua","Jerry","Dennis","Walter","Patrick","Patrick","Harold","Herold","Henry","Carl","Ryan","Joe","Albert","Jack","Terry"]

@@ -37,15 +37,20 @@ Menu MyMenu, Add,OpenApp, item1handler
 Menu MyMenu, Add,Screen, item2handler
 Menu MyMenu, Add,Git, item3handler
 Menu MyMenu, Add,Mdn, item4handler
-Menu MyMenu, Add,Pug, item5handler
-Menu MyMenu, Add,CodeOpen, item6handler
-Menu MyMenu, Add,OnTop, item7handler
-Menu MyMenu, Add,Calc, item8handler
+Menu MyMenu, Add,OnTop, item5handler
+
+Menu, MyMenu, Add,Code, MenuHandler
+Menu, MySubMenu4, Add, Pug, SubMenu4Label
+Menu, MySubMenu4, Add, CodeOpen, SubMenu4Label
+Menu, MySubMenu4, Add, Validate, SubMenu4Label
+Menu, MyMenu, Add,Code, :MySubMenu4
 
 Menu, MyMenu, Add, Color, MenuHandler
 Menu, MySubMenu2, Add, Pick, SubMenu2Label
 Menu, MySubMenu2, Add, Match Color, SubMenu2Label
 Menu, MySubMenu2, Add, Picture, SubMenu2Label
+Menu, MySubMenu2, Add, Gradient, SubMenu2Label
+Menu, MySubMenu2, Add, Gradient UI, SubMenu2Label
 Menu, MyMenu, Add, Color, :MySubMenu2
 
 
@@ -55,6 +60,7 @@ Menu, MySubMenu1, Add, Collins, SubMenu1Label
 Menu, MySubMenu1, Add, Oxford, SubMenu1Label
 Menu, MySubMenu1, Add, Quizlet, SubMenu1Label
 Menu, MySubMenu1, Add, Youglish, SubMenu1Label
+Menu, MySubMenu1, Add, Life, SubMenu1Label
 Menu, MyMenu, Add, English, :MySubMenu1
 
 Menu, MyMenu, Add, English Base, MenuHandler
@@ -63,9 +69,9 @@ Menu, MySubMenu3, Add, IreggularVerb, SubMenu3Label
 Menu, MySubMenu3, Add, Statement, SubMenu3Label
 Menu, MyMenu, Add, English Base, :MySubMenu3
 
-
-Menu MyMenu, Add,Reload, item9handler
-Menu MyMenu, Add,Close, item10handler
+Menu MyMenu, Add,Youtube, item6handler
+Menu MyMenu, Add,Reload, item7handler
+Menu MyMenu, Add,Close, item8handler
 
 Menu MyMenu, Show
 Return
@@ -96,22 +102,20 @@ Return
 
 
 item4handler:
-send,^c
-sleep,50
+OldClipboard:= Clipboard
+Clipboard:= ""
+Send, ^c
+ClipWait
+Run chrome.exe
+sleep,100
+WinMove, ahk_exe chrome.exe ,, 10,370, 640, 700
 Run https://developer.mozilla.org/ru/search?q=%Clipboard%
 Return
 
+
+
+
 item5handler:
-Run https://html2jade.org/
-Sleep 100
-Return
-
-item6handler:
-Run https://codepen.io/PavelMikuMr/pen/MWXNeQM
-Return
-
-
-item7handler:
 ; Clipboard:=""
 ; SendInput, ^c
 ; ClipWait, 1 
@@ -120,16 +124,20 @@ item7handler:
 Gosub, Alwaysontop
 Return
 
-
-item8handler:
-Run, calc.exe
+item6handler:
+run chrome.exe
+sleep,200
+Run https://www.youtube.com/
+WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+sleep, 100
+IfWinActive, ahk_class chrome.exe
 Return
 
-item9handler:
+item7handler:
 send,^r
 Return
 
-item10handler:
+item8handler:
 Return
 
 
@@ -150,6 +158,9 @@ else if (A_ThisMenuItemPos = 4) {
 else if (A_ThisMenuItemPos = 5) {
 	Run C:\Users\pavel\GitHub\Soft\Youglish\Youglish
 }
+else if (A_ThisMenuItemPos = 6) {
+	Run C:\Users\pavel\GitHub\LIbrary\English\Life\Life.cs
+}
 
 return
 
@@ -162,6 +173,18 @@ If (A_ThisMenuItemPos = 1) {
 else if (A_ThisMenuItemPos = 3) {
 	Run C:\Users\pavel\Documents\ShareX\Screenshots\2022-12
 }
+else if (A_ThisMenuItemPos = 4) {
+    run chrome.exe
+    sleep,200
+	Run https://uigradients.com/#GradeGrey
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+}
+else if (A_ThisMenuItemPos = 5) {
+    run chrome.exe
+    sleep,200
+	Run https://cssgradient.io/gradient-backgrounds
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+}
 return
 
 SubMenu3Label:
@@ -172,6 +195,27 @@ If (A_ThisMenuItemPos = 1) {
 }
 else if (A_ThisMenuItemPos = 3) {
 	Run C:\Users\pavel\GitHub\LIbrary\English\Statement\Table.png
+}
+return
+
+
+SubMenu4Label:
+If (A_ThisMenuItemPos = 1) {
+	run chrome.exe
+    sleep,200
+	Run https://html2jade.org/
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+} else if (A_ThisMenuItemPos = 2) {
+	run chrome.exe
+    sleep,200
+	Run https://codepen.io/PavelMikuMr/pen/MWXNeQM
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+}
+else if (A_ThisMenuItemPos = 3) {
+	run chrome.exe
+    sleep,200
+	Run https://validator.w3.org/#validate_by_input
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
 }
 return
 
