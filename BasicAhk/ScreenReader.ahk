@@ -33,7 +33,7 @@ return
 
 !0::
 ; XButton1::
-Menu MyMenu, Add,OpenApp, item1handler
+Menu MyMenu, Add,Define, item1handler
 Menu MyMenu, Add,Screen, item2handler
 Menu MyMenu, Add,Git, item3handler
 Menu MyMenu, Add,Mdn, item4handler
@@ -44,6 +44,11 @@ Menu, MySubMenu4, Add, Pug, SubMenu4Label
 Menu, MySubMenu4, Add, CodeOpen, SubMenu4Label
 Menu, MySubMenu4, Add, Validate, SubMenu4Label
 Menu, MyMenu, Add,Code, :MySubMenu4
+
+Menu, MyMenu, Add,Api, MenuHandler
+Menu, MySubMenu5, Add, Public API, SubMenu5Label
+Menu, MySubMenu5, Add, API, SubMenu5Label
+Menu, MyMenu, Add, Api, :MySubMenu5
 
 Menu, MyMenu, Add, Color, MenuHandler
 Menu, MySubMenu2, Add, Pick, SubMenu2Label
@@ -69,7 +74,10 @@ Menu, MySubMenu3, Add, IreggularVerb, SubMenu3Label
 Menu, MySubMenu3, Add, Statement, SubMenu3Label
 Menu, MyMenu, Add, English Base, :MySubMenu3
 
-Menu MyMenu, Add,Youtube, item6handler
+
+
+
+Menu MyMenu, Add,InsepctSearch, item6handler
 Menu MyMenu, Add,Reload, item7handler
 Menu MyMenu, Add,Close, item8handler
 
@@ -77,15 +85,31 @@ Menu MyMenu, Show
 Return
 
 item1handler:
-CoordMode, Mouse , Screen
+; OldClipboard:= Clipboard
+; Clipboard:= ""
+; Send, ^c
+; ClipWait
+; CoordMode, Mouse , Screen
+; run chrome.exe
+; sleep,200
+; IfWinActive, ahk_exe chrome.exe
+; MouseGetPos, xpos, ypos
+; PosX:=xpos/1.3
+; PosY:=ypos/3
+; WinMove, ahk_exe chrome.exe ,, %xpos%,%PosY% , 640, 700
+; sleep 100
+; Run https://www.collinsdictionary.com/dictionary/english/%Clipboard%
+
+
+OldClipboard:= Clipboard
+Clipboard:= ""
+Send, ^c
+ClipWait
 run chrome.exe
 sleep,200
-IfWinActive, ahk_exe chrome.exe
-MouseGetPos, xpos, ypos
-PosX:=xpos/1.3
-PosY:=ypos/3
-WinMove, ahk_exe chrome.exe ,, %xpos%,%PosY% , 640, 700
-sleep 100
+Run https://www.collinsdictionary.com/dictionary/english/%Clipboard%
+sleep,100
+WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
 Return
 
 
@@ -97,7 +121,15 @@ Return
 
 
 item3handler:
+OldClipboard:= Clipboard
+Clipboard:= ""
+Send, ^c
+ClipWait
+Run chrome.exe
+sleep,100
 Run https://github.com/PavelMikuMr
+WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+sleep,100
 Return
 
 
@@ -108,8 +140,9 @@ Send, ^c
 ClipWait
 Run chrome.exe
 sleep,100
-WinMove, ahk_exe chrome.exe ,, 10,370, 640, 700
 Run https://developer.mozilla.org/ru/search?q=%Clipboard%
+WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+sleep,100
 Return
 
 
@@ -125,12 +158,14 @@ Gosub, Alwaysontop
 Return
 
 item6handler:
-run chrome.exe
-sleep,200
-Run https://www.youtube.com/
-WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
-sleep, 100
-IfWinActive, ahk_class chrome.exe
+    send,^c
+    WinActivate, DevTools
+    send,^1
+    sleep , 100
+    send,^f
+    sleep , 50
+    send,^v
+    send, {enter}
 Return
 
 item7handler:
@@ -219,8 +254,22 @@ else if (A_ThisMenuItemPos = 3) {
 }
 return
 
-Return
+SubMenu5Label:
+If (A_ThisMenuItemPos = 1) {
+	run chrome.exe
+    sleep,200
+	Run https://github.com/public-apis/public-apis
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+}
+else if (A_ThisMenuItemPos = 2) {
+	run chrome.exe
+    sleep,200
+	Run https://validator.w3.org/#validate_by_input
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+}
+return
 
+Return
 
 ; item10handler:
 ; if (KeyPressCountSelActor > 0) ;if key press count is greater than zero because you have run this hotkey just before

@@ -70,6 +70,11 @@ Menu, VScde, Add, Css LifeHack, MenuHandler
 Menu, MySubMenu8, Add, Vertical Iline, SubMenu8Label
 Menu, MySubMenu8, Add, Reset Value, SubMenu8Label
 Menu, MySubMenu8, Add, Useful things, SubMenu8Label
+Menu, MySubMenu8, Add, ListStyle, SubMenu8Label
+Menu, MySubMenu8, Add, fee, SubMenu8Label
+Menu, MySubMenu8, Add, foo, SubMenu8Label
+Menu, MySubMenu8, Add, faa, SubMenu8Label
+Menu, MySubMenu8, Add, fii, SubMenu8Label
 Menu, VScde, Add, Css LifeHack, :MySubMenu8
 
 Menu, VScde, Add, Css Tools, MenuHandler
@@ -83,7 +88,8 @@ Menu, VScde, Add, Css Tools, :MySubMenu3
 
 Menu, VScde, Add, Verstka, MenuHandler
 Menu, MySubMenu9, Add, Laborghini, SubMenu9Label
-Menu, MySubMenu9, Add, Command, SubMenu9Label
+Menu, MySubMenu9, Add, StrayHTML, SubMenu9Label
+Menu, MySubMenu9, Add, StrayJS, SubMenu9Label
 Menu, VScde, Add, Verstka, :MySubMenu9
 
 
@@ -108,8 +114,8 @@ Menu, VScde, Add, PrePrecess, :MySubMenu4
 
 
 
-Menu, VScde, Add, Note, MainMenuLabel
-
+Menu, VScde, Add, Rem, MainMenuLabel
+Menu, VScde, Add, KValue, MainMenuLabel
 Menu, VScde, Add, Loop Operators, MenuHandler
 Menu, MySubMenu1, Add, While, SubMenu1Label
 Menu, MySubMenu1, Add, DoWhile, SubMenu1Label
@@ -195,9 +201,12 @@ If (A_ThisMenuItemPos = 1) {
 }else if (A_ThisMenuItemPos = 8) {
 	 Run G:\GlobalLibrary\ShaderLibrary\Other\ChanellPacking\AdvanceWorkChannel.png
 }else if (A_ThisMenuItemPos = 9) {
-	 Run C:\Users\pavel\GitHub\LIbrary\Note\Note.txt
+	 Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\ones$tens\Rem.txt
 }else if (A_ThisMenuItemPos = 10) {
-	 Run  C:\Users\pavel\GitHub\LIbrary\Note\Note.txt
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\ones$tens\Rem.txt
+}
+else if (A_ThisMenuItemPos = 11) {
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\goodvalue.cs
 }
 return
 
@@ -289,6 +298,20 @@ If (A_ThisMenuItemPos = 1) {
 	Run, C:\Users\pavel\GitHub\LIbrary\GIT\GItPrompt.cs
 } else if (A_ThisMenuItemPos = 3) {
 	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\DifferentUsefulthings\things.png
+
+} else if (A_ThisMenuItemPos = 4) {
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\Flist.jpg
+
+} else if (A_ThisMenuItemPos = 5) {
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\free.jpg
+
+
+} else if (A_ThisMenuItemPos = 6) {
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\free.jpg
+
+
+} else if (A_ThisMenuItemPos = 7) {
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\free.jpg
 }
 return
 
@@ -296,7 +319,9 @@ SubMenu9Label:
 If (A_ThisMenuItemPos = 1) {
 	Run  C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\Laborghini\Laborghini.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\Laborghini\
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\pray\Elements.png
+} else if (A_ThisMenuItemPos = 3) {
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\pray\js.png
 }
 return
 ;---------------------------------------

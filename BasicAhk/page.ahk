@@ -76,6 +76,8 @@ IsGoogle()
 *RAlt::
 	if WinActive("ahk_exe chrome.exe")
 		EnableGoogle()
+    else if WinActive("ahk_exe brave.exe")
+		EnableGoogle()    
 	else
     	EnableLevelFive()
 
@@ -836,7 +838,7 @@ return
     return
  */
 	; ExplorerGroup
-    a::
+    i::
     GroupAdd, NotepadGroup, ahk_class Notepad++
     If WinActive("ahk_exe notepad++.exe")
 	GroupActivate, NotepadGroup, r
@@ -879,6 +881,7 @@ return
     Send,{LShift Down}{Tab}{LShift Up}
     return
 
+; !change!
     z::
     CoordMode, Mouse , Screen
     run chrome.exe
@@ -887,9 +890,21 @@ return
     MouseGetPos, xpos, ypos
     PosX:=xpos/1.3
     PosY:=ypos/3
-    WinMove, ahk_exe chrome.exe ,, 10,386, 640, 700
+    WinMove, ahk_exe chrome.exe ,, 10,386
     sleep 100
     return
+
+    ; z::
+    ; CoordMode, Mouse , Screen
+    ; run brave.exe
+    ; sleep,200
+    ; IfWinActive, ahk_exe brave.exe
+    ; MouseGetPos, xpos, ypos
+    ; PosX:=xpos/1.3
+    ; PosY:=ypos/3
+    ; WinMove, ahk_exe brave.exe ,, 10,386, 640, 700
+    ; sleep 100
+    ; return
 
     
     q::SendInput, {LCtrl down}{LShift down}{Left}{LShift up}{LCtrl up}{BackSpace}
@@ -926,6 +941,23 @@ return
     send,^1
     return
 
+    a::
+    send,^c
+    WinActivate, DevTools
+    send,^1
+    sleep , 100
+    send,^f
+    sleep , 50
+    send,^v
+    send, {enter}
+    return
+
+    f4::
+    WinActivate, DevTools
+    WinMove, A ,, 1383,0, 536, 1079
+    return
+
+
     d::
     WinActivate, Google
     return
@@ -947,16 +979,29 @@ return
     ; KeyPressCountSelActor := 0 ;reset the count to zero
     ; SetTimer, KeyPressMonitorSelActor, Off ;turn label off to stop monitoring for key     strokes
     ; tooltip, ;turn tooltip off
+
+    ; !change!
     OldClipboard:= Clipboard
     Clipboard:= ""
     Send, ^c ;copies selected text
     ClipWait
     Run chrome.exe
     sleep,100
-	WinMove, ahk_exe chrome.exe ,, 10,370, 640, 700
+	WinMove, ahk_exe chrome.exe ,, 10,370
     Run http://www.google.com/search?q=%Clipboard%
     Return
 
+    ; OldClipboard:= Clipboard
+    ; Clipboard:= ""
+    ; Send, ^c ;copies selected text
+    ; ClipWait
+    ; Run brave.exe
+    ; sleep,100
+	; WinMove, ahk_exe brave.exe,, 10,370, 640, 700
+    ; Run http://www.google.com/search?q=%Clipboard%
+    ; Return
+
+ ; !change!
     l::
     OldClipboard:= Clipboard
     Clipboard:= ""
@@ -964,14 +1009,25 @@ return
     ClipWait
     Run chrome.exe
     sleep,100
-	WinMove, ahk_exe chrome.exe ,, 10,370, 640, 700
+	WinMove, ahk_exe chrome.exe ,, 10,370
     Run %Clipboard% 
     Return
 
-    ]::
+    ; l::
+    ; OldClipboard:= Clipboard
+    ; Clipboard:= ""
+    ; Send, ^c ;copies selected text
+    ; ClipWait
+    ; Run brave.exe
+    ; sleep,100
+	; WinMove, ahk_exe brave.exe ,, 10,370, 640, 700
+    ; Run %Clipboard% 
+    ; Return
+
+    o::
     ControlSend, , {Right}, ahk_class MozillaWindowClass
     return 
-    [::
+    k::
     ControlSend, , {Left}, ahk_class MozillaWindowClass
     return 
     

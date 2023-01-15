@@ -200,9 +200,18 @@ If (A_ThisMenuItemPos = 1) {
 }else if (A_ThisMenuItemPos = 8) {
 	 Run C:\Users\pavel\GitHub\LIbrary\Other\Snip\Snippets.png
 }else if (A_ThisMenuItemPos = 9) {
-	 Run C:\Users\pavel\GitHub\LIbrary\Other\Console\Console.cs
+	run chrome.exe
+	sleep,200
+	Run https://github.com/BoryaMogila/clean-code-javascript-ru#%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+	sleep, 100
 }else if (A_ThisMenuItemPos = 10) {
-	 Run C:\Users\pavel\GitHub\LIbrary\Other\Console\Console.cs
+	;  Run C:\Users\pavel\GitHub\LIbrary\Other\Console\Console.cs
+	run chrome.exe
+	sleep,200
+	Run https://github.com/BoryaMogila/clean-code-javascript-ru#%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+	sleep, 100
 }else if (A_ThisMenuItemPos = 11) {
 	 Run C:\Users\pavel\GitHub\LIbrary\Other\Snip\Snippets.png
 }
@@ -506,7 +515,7 @@ send,^k
 return
 
 !BackSpace::
-send,{XButton1}
+send,{AltDown}{left}{AltUp}
 return
 
 !s::
