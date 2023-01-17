@@ -490,7 +490,7 @@ return
     return
 
     #o::
-    send,+!d
+    send,+!s
     return
 
     #u::
@@ -572,7 +572,7 @@ return
 
 
     Esc::
-    send,{Escape}
+    send,{delete}
     return
     Enter::
     send,{Escape}
@@ -924,6 +924,13 @@ return
     ; send,^+a
     ; return
 
+    2::
+    send,{f2}
+    send,{end}
+    send,{ShiftDown}{home}{ShiftUp}
+    Send, ^c
+    send,{escape}
+    return
     s::
     send,^s
     return
@@ -965,9 +972,11 @@ return
     4::
     send,!{f4}
     return
-
-
     g::
+    send,!g
+    return
+
+    t::
     ; OldClipboard:= Clipboard
     ; Clipboard:= ""
     ; Send, ^c ;copies selected text
@@ -1154,8 +1163,16 @@ send,{right}
 send,{enter}
 return
 
+!w::
+SendInput, {AltDown}{WheelUp}{AltUp}
+; SendInput, {WheelUp}
+return
 
-
+!s::
+SendInput, {AltDown}{WheelDown}{AltUp}
+; SendInput, {WheelDown}
+; SendInput, {WheelDown}
+return
 ; e:: WheelUp    
 ; return
 ; d:: WheelDown    

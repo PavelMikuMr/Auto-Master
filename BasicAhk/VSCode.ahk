@@ -53,7 +53,9 @@ Menu, Three Menu, Add, ValueRefType, :ValueRefType Three Menu
 Menu, Object Three Menu, Add, Object Concept, MainMenuStudio4
 Menu, Object Three Menu, Add, Metods.This.For(in), MainMenuStudio4
 Menu, Object Three Menu, Add, This, MainMenuStudio4
-Menu, Object Three Menu, Add, Descturction|Spread|Rest, MainMenuStudio4
+Menu, Object Three Menu, Add, Descturction|Spread|Rest,MainMenuStudio4 
+Menu, Object Three Menu, Add, Object.Entries|Destroy,MainMenuStudio4 
+
 
 Menu, Three Menu, Add, Object, :Object Three Menu
 
@@ -348,6 +350,9 @@ If (A_ThisMenuItemPos = 1) {
 	Run C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Object\This.cs
 } else if (A_ThisMenuItemPos = 4) {
 	Run C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Object\destruction.cs
+
+} else if (A_ThisMenuItemPos = 5) {
+	Run C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Object\Entries.png
 }
 return
 
@@ -477,9 +482,9 @@ return
 send,{-}
 return
 
-!f::
-send,{&}
-return
+; !f::
+; send,{&}
+; return
 
 
 
@@ -518,13 +523,14 @@ return
 send,{AltDown}{left}{AltUp}
 return
 
-!s::
-send,^+y
-return
+; !s::
+; send,^+y
+; return
 
 !f::
 send,^+h
 return
+
 
 
 
