@@ -72,6 +72,7 @@ Menu, MyMenu, Add, English Base, MenuHandler
 Menu, MySubMenu3, Add, ReggularVerb, SubMenu3Label
 Menu, MySubMenu3, Add, IreggularVerb, SubMenu3Label
 Menu, MySubMenu3, Add, Statement, SubMenu3Label
+Menu, MySubMenu3, Add, In.On.At, SubMenu3Label
 Menu, MyMenu, Add, English Base, :MySubMenu3
 
 
@@ -230,6 +231,9 @@ If (A_ThisMenuItemPos = 1) {
 }
 else if (A_ThisMenuItemPos = 3) {
 	Run C:\Users\pavel\GitHub\LIbrary\English\Statement\Table.png
+}
+else if (A_ThisMenuItemPos = 4) {
+	Run C:\Users\pavel\GitHub\LIbrary\English\In.On.At\InOnAt.jpg
 }
 return
 

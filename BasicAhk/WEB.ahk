@@ -21,25 +21,25 @@ SetTitleMatchMode Fast
 ;________________________________JavaScript_____________________________________________
 ; #IfWinActive ahk_exe Code.exe
 
-Menu, VScde, Add, Web Element/Style, MainMenuStudio
+Menu, VScde, Add, Framework, MainMenuStudio
 
-Menu, Three Menu, Add, InputData, MainMenuStudio
-Menu, Three Menu, Add, Class, MainMenuStudio
+Menu, Three Menu, Add, React, MainMenuStudio
+Menu, Three Menu, Add, TailWind, MainMenuStudio
 Menu, Three Menu, Add, ValueRefType, MainMenuStudio
 Menu, Three Menu, Add, Object, MainMenuStudio
 Menu, Three Menu, Add, Convert, MainMenuStudio
 
-Menu, InputDataThree Menu, Add, Form/Input/Label , MainMenuStudio1
-Menu, InputDataThree Menu, Add, freese, MainMenuStudio1
-Menu, InputDataThree Menu, Add, freeks, MainMenuStudio1
+Menu, ReactThree Menu, Add, Form/Input/Label , MainMenuStudio1
+Menu, ReactThree Menu, Add, freese, MainMenuStudio1
+Menu, ReactThree Menu, Add, freeks, MainMenuStudio1
 
-Menu, Three Menu, Add, InputData, :InputDataThree Menu
+Menu, Three Menu, Add, React, :ReactThree Menu
 
-Menu, Class Three Menu, Add, ClassPrClass 1, MainMenuStudio2
-Menu, Class Three Menu, Add, ClassPrClass 2, MainMenuStudio2
-Menu, Class Three Menu, Add, ClassPrClass 3, MainMenuStudio2
+Menu, TailWind Three Menu, Add, CssSheet, MainMenuStudio2
+Menu, TailWind Three Menu, Add, TailWindPrTailWind 2, MainMenuStudio2
+Menu, TailWind Three Menu, Add, TailWindPrTailWind 3, MainMenuStudio2
 
-Menu, Three Menu, Add, Class, :Class Three Menu
+Menu, Three Menu, Add, TailWind, :TailWind Three Menu
 
 Menu, ValueRefType Three Menu, Add, Ref. Value. Stack. Heap, MainMenuStudio3
 Menu, ValueRefType Three Menu, Add, Null Ref Out, MainMenuStudio3
@@ -59,12 +59,17 @@ Menu, Convert Three Menu, Add, ConvertPrint 3, MainMenuStudio5
 
 Menu, Three Menu, Add, Convert, :Convert Three Menu
 
-Menu, VScde, Add, Web Element/Style, :Three Menu
+Menu, VScde, Add, Framework, :Three Menu
+
+
+
+
+
 ;-------------------------------------------------------
-Menu, VScde, Add, HTML/Css(ELEMENT), MenuHandler
+Menu, VScde, Add, HTML, MenuHandler
 Menu, MySubMenu6, Add,HTML/Css, SubMenu6Label
 Menu, MySubMenu6, Add, Freese, SubMenu6Label
-Menu, VScde, Add, HTML/Css(ELEMENT), :MySubMenu6
+Menu, VScde, Add, HTML, :MySubMenu6
 
 Menu, VScde, Add, Css LifeHack, MenuHandler
 Menu, MySubMenu8, Add, Vertical Iline, SubMenu8Label
@@ -338,7 +343,10 @@ return
 
 MainMenuStudio2:
 If (A_ThisMenuItemPos = 1) {
-	MsgBox, you press button 1
+	run chrome.exe
+    sleep,200
+	Run https://nerdcave.com/tailwind-cheat-sheet
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
 } else if (A_ThisMenuItemPos = 2) {
 	MsgBox, you press button 2
 } else if (A_ThisMenuItemPos = 3) {

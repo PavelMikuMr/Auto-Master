@@ -94,7 +94,6 @@ return
 
     ; arrow keys
 
-
     a::return
     s::return
     f::return
@@ -322,6 +321,7 @@ return
     send,{End}
     send,{LShift up}
     send, ^c 
+    send,{Escape}
     return 
 
     
@@ -469,11 +469,12 @@ return
     
 
 
+
     #i::
     send !+^w
     return
-
     #l::
+
     send !+^b
     return
 
@@ -489,21 +490,21 @@ return
     send !+^a
     return
 
-    #o::
-    send,+!s
-    return
+    ; #o::
+    ; send,+!v
+    ; return
 
-    #u::
-    send,+!a
-    return
+    ; #u::
+    ; send,+!a
+    ; return
 
-    #m::
-    send,+!w
-    Return
+    ; #m::
+    ; send,+!z
+    ; Return
 
-    #,::
-    send,+!x
-    Return
+    ; #,::
+    ; send,+!x
+    ; Return
 
 
     
@@ -568,6 +569,13 @@ return
     return
     
 
+    1::+!3
+    return
+
+
+    3::+!4
+    send,{LAlt}{f8}
+    return
 
 
 
@@ -577,6 +585,9 @@ return
     Enter::
     send,{Escape}
     return
+
+
+    
           
 #If
 
@@ -847,12 +858,15 @@ return
     return
 
 	;Shell Group 
+    ; x::
+    ; GroupAdd, ShellGroup, ahk_exe WindowsTerminal.exe
+    ; If WinActive("ahk_exe WindowsTerminal.exe")
+	; GroupActivate, ShellGroup, r
+    ; else
+	; WinActivate ahk_exe WindowsTerminal.exe
+    ; return
     x::
-    GroupAdd, ShellGroup, ahk_exe WindowsTerminal.exe
-    If WinActive("ahk_exe WindowsTerminal.exe")
-	GroupActivate, ShellGroup, r
-    else
-	WinActivate ahk_exe WindowsTerminal.exe
+    send,!+v
     return
 
     ; Resize the window
@@ -876,6 +890,7 @@ return
     WinMinimize, ahk_id %active_id%
     return
 
+    Esc::!+t
 
     Tab::
     Send,{LShift Down}{Tab}{LShift Up}
@@ -915,6 +930,9 @@ return
     space::^b
     return
 
+    \::
+    send,~
+    return
 
     n::
     send,#3
@@ -959,10 +977,7 @@ return
     send, {enter}
     return
 
-    f4::
-    WinActivate, DevTools
-    WinMove, A ,, 1383,0, 536, 1079
-    return
+  
 
 
     d::
@@ -1035,12 +1050,26 @@ return
 
     o::
     ControlSend, , {Right}, ahk_class MozillaWindowClass
+    ControlSend, , {Right}, ahk_class MediaPlayerClassicW
     return 
     k::
     ControlSend, , {Left}, ahk_class MozillaWindowClass
+    ControlSend, , {Left}, ahk_class MediaPlayerClassicW
     return 
     
-
+    +d::
+    WinActivate, ahk_exe Code.exe
+    WinMove, ahk_exe chrome.exe,, 1383,0, 536, 1079
+    WinActivate, ahk_exe chrome.exe
+    return
+    +s::
+    WinActivate, ahk_exe Code.exe
+    WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+    WinActivate, ahk_exe chrome.exe
+    return
+    +w::
+    WinMove, ahk_exe Code.exe ,, 4,1, 1375, 1079
+    return
 #If
 
 
@@ -1163,15 +1192,14 @@ send,{right}
 send,{enter}
 return
 
-!w::
-SendInput, {AltDown}{WheelUp}{AltUp}
-; SendInput, {WheelUp}
-return
+!w::!WheelUp
+!s::!WheelDown
 
-!s::
-SendInput, {AltDown}{WheelDown}{AltUp}
-; SendInput, {WheelDown}
-; SendInput, {WheelDown}
+!m::
+send,{WheelUp}
+return
+!,::
+send,{WheelDown}
 return
 ; e:: WheelUp    
 ; return
@@ -1222,6 +1250,7 @@ return
 send,{Esc}
 return
  
+
 
 
 ; ShareX

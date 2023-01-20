@@ -108,8 +108,9 @@ Menu, VScde, Add, JavaScriptcookie, :MySubMenu4
 
 
 
-Menu, VScde, Add, PureCode, MainMenuLabel
+Menu, VScde, Add, Clean Code, MainMenuLabel
 Menu, VScde, Add, JSsnip, MainMenuLabel
+Menu, VScde, Add, Command, MainMenuLabel
 Menu, VScde, Add, Loop Operators, MenuHandler
 Menu, MySubMenu1, Add, While, SubMenu1Label
 Menu, MySubMenu1, Add, DoWhile, SubMenu1Label
@@ -165,10 +166,18 @@ Menu, Two Menu, Add, Convert, :Convert Two Menu
 Menu, VScde, Add, DataType, :Two Menu
 
 
-Menu, VScde, Add,English, MenuHandler
-Menu, MySubMenu8, Add, Irregular, SubMenu8Label
-Menu, MySubMenu8, Add, Regullar, SubMenu8Label
-Menu, VScde, Add, English, :MySubMenu8
+Menu, VScde, Add,TypeScript, MenuHandler
+Menu, MySubMenu8, Add, Types, SubMenu8Label
+Menu, MySubMenu8, Add, Interfaces, SubMenu8Label
+Menu, MySubMenu8, Add, Enum, SubMenu8Label
+Menu, MySubMenu8, Add, Functions, SubMenu8Label
+Menu, MySubMenu8, Add, Classes, SubMenu8Label
+Menu, MySubMenu8, Add, Guard, SubMenu8Label
+Menu, MySubMenu8, Add, Generic, SubMenu8Label
+Menu, MySubMenu8, Add, Operators, SubMenu8Label
+Menu, MySubMenu8, Add, ESlint config, SubMenu8Label
+Menu, MySubMenu8, Add, Config Reference, SubMenu8Label
+Menu, VScde, Add,TypeScript, :MySubMenu8
 
 
 Menu, VScde, Add, Close, MainMenu2Label
@@ -216,6 +225,8 @@ If (A_ThisMenuItemPos = 1) {
 	sleep, 100
 }else if (A_ThisMenuItemPos = 11) {
 	 Run C:\Users\pavel\GitHub\LIbrary\Other\Snip\Snippets.png
+}else if (A_ThisMenuItemPos = 12) {
+	 Run C:\Users\pavel\GitHub\LIbrary\CommandPrompt\commandShell.cs
 }
 return
 
@@ -304,9 +315,34 @@ return
 
 SubMenu8Label:
 If (A_ThisMenuItemPos = 1) {
-	Run, C:\Users\pavel\GitHub\LIbrary\English\Verb\IRRegular.pdf
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\types.cs
 } else if (A_ThisMenuItemPos = 2) {
-	Run, C:\Users\pavel\GitHub\LIbrary\English\Verb\Regular.pdf
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Interfaces.cs
+}else if (A_ThisMenuItemPos = 3) {
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Enum.cs
+}else if (A_ThisMenuItemPos = 4) {
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Functions.cs
+}else if (A_ThisMenuItemPos = 5) {
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Classes.cs
+}else if (A_ThisMenuItemPos = 6) {
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Guard.cs
+}else if (A_ThisMenuItemPos = 7) {
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Generic.cs
+}else if (A_ThisMenuItemPos = 8) {
+	Run, C:\Users\pavel\GitHub\LIbrary\typescript\Operators.cs
+	
+}else if (A_ThisMenuItemPos = 9) {
+	run chrome.exe
+    sleep,200
+	Run https://eslint.org/docs/latest/use/configure/configuration-files
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
+
+}
+else if (A_ThisMenuItemPos = 10) {
+	run chrome.exe
+    sleep,200
+	Run https://www.typescriptlang.org/tsconfig
+	WinMove, ahk_exe chrome.exe ,, 10,370, 850, 700
 }
 return
 ;---------------------------------------
@@ -452,6 +488,10 @@ return
 
 #IfWinActive ahk_exe Code.exe
 
+!Space::
+send,^{PgDn}
+return
+
 >^a::
 send,^+3
 return
@@ -460,9 +500,7 @@ send,^+4
 return
 
 
-!space::
-send,+!q
-return
+
 
 +Esc::
 send,^+x
@@ -511,7 +549,7 @@ return
 \::AppsKey
 return
 
-^,::
+!i::
 send,^f
 return
 

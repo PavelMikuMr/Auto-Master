@@ -17,7 +17,8 @@ SetTitleMatchMode Fast
 
 ;----------------------------------Glabal Setting--------------------------------
 
-
+Speed := 100 
+Speedmin := 10 
 
 Alt::
 If WinActive("ahk_group AltTabWindow") {
@@ -28,3 +29,15 @@ If WinActive("ahk_group AltTabWindow") {
 Return
 
 
+
+#w::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", -Speed, "UInt", 0, "UPtr", 0)
+#s::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", Speed, "UInt", 0, "UPtr", 0)
+#a::DllCall("mouse_event", "UInt", 0x0001, "Int", -Speed, "Int", 0, "UInt", 0, "UPtr", 0)
+#d::DllCall("mouse_event", "UInt", 0x0001, "Int", Speed, "Int", 0, "UInt", 0, "UPtr", 0)
+
+#+w::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", -Speedmin, "UInt", 0, "UPtr", 0)
+#+s::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", Speedmin, "UInt", 0, "UPtr", 0)
+#+a::DllCall("mouse_event", "UInt", 0x0001, "Int", -Speedmin, "Int", 0, "UInt", 0, "UPtr", 0)
+#+d::DllCall("mouse_event", "UInt", 0x0001, "Int", Speedmin, "Int", 0, "UInt", 0, "UPtr", 0)
+
+#q::click
