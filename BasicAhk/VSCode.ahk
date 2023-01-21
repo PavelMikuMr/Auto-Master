@@ -111,6 +111,7 @@ Menu, VScde, Add, JavaScriptcookie, :MySubMenu4
 Menu, VScde, Add, Clean Code, MainMenuLabel
 Menu, VScde, Add, JSsnip, MainMenuLabel
 Menu, VScde, Add, Command, MainMenuLabel
+Menu, VScde, Add, Wear, MainMenuLabel
 Menu, VScde, Add, Loop Operators, MenuHandler
 Menu, MySubMenu1, Add, While, SubMenu1Label
 Menu, MySubMenu1, Add, DoWhile, SubMenu1Label
@@ -125,25 +126,25 @@ Menu, VScde, Add, Math|LogicOperators, :MySubMenu2
 
 ;-------------------------------------------------
 
-Menu, VScde, Add, DataType, MainMenuVisual
+Menu, VScde, Add, Frameworks, MainMenuVisual
 
-Menu, Two Menu, Add, Data, MainMenuVisual
-Menu, Two Menu, Add, String, MainMenuVisual
+Menu, Two Menu, Add, React, MainMenuVisual
+Menu, Two Menu, Add, NextJs, MainMenuVisual
 Menu, Two Menu, Add, Double, MainMenuVisual
 Menu, Two Menu, Add, Dynamic, MainMenuVisual
 Menu, Two Menu, Add, Convert, MainMenuVisual
 
-Menu, ADataTwo Menu, Add, Data Basic, MainMenuVisual1
-Menu, ADataTwo Menu, Add, Cast, MainMenuVisual1
-Menu, ADataTwo Menu, Add, HousePrint 3, MainMenuVisual1
+Menu, REACT Menu, Add, ComponetsWork, MainMenuVisual1
+Menu, REACT Menu, Add, Hook, MainMenuVisual1
+Menu, REACT Menu, Add, HousePrint 3, MainMenuVisual1
 
-Menu, Two Menu, Add, Data, :ADataTwo Menu
+Menu, Two Menu, Add, React, :REACT Menu
 
-Menu, String Two Menu, Add, Work with String, MainMenuVisual2
-Menu, String Two Menu, Add, StringPrString 2, MainMenuVisual2
-Menu, String Two Menu, Add, StringPrString 3, MainMenuVisual2
+Menu, Next Menu, Add, Work with String, MainMenuVisual2
+Menu, Next Menu, Add, StringPrString 2, MainMenuVisual2
+Menu, Next Menu, Add, StringPrString 3, MainMenuVisual2
 
-Menu, Two Menu, Add, String, :String Two Menu
+Menu, Two Menu, Add, NextJs, :Next Menu
 
 Menu, Double Two Menu, Add, DoublePrint 1, MainMenuVisual3
 Menu, Double Two Menu, Add, DoublePrint 2, MainMenuVisual3
@@ -163,7 +164,7 @@ Menu, Convert Two Menu, Add, ConvertPrint 3, MainMenuVisual5
 
 Menu, Two Menu, Add, Convert, :Convert Two Menu
 
-Menu, VScde, Add, DataType, :Two Menu
+Menu, VScde, Add, Frameworks, :Two Menu
 
 
 Menu, VScde, Add,TypeScript, MenuHandler
@@ -192,9 +193,9 @@ return
 
 MainMenuLabel:
 If (A_ThisMenuItemPos = 1) {
-	Run C:\Users\pavel\GitHub\LIbrary\BasicPart\String.Operatros.Metods\String.Operatros.Metods.png
+	
 } else if (A_ThisMenuItemPos = 2) {
-	Run C:\Users\pavel\GitHub\LIbrary\BasicPart\LogicOperators\LogicOperators.pngх
+	Run C:\Users\pavel\GitHub\LIbrary\BasicPart\LogicOperators\LogicOperators.png
 	
 }else if (A_ThisMenuItemPos = 3) {
 	Run C:\Users\pavel\GitHub\LIbrary\LogicOperators\Ifelse.cs
@@ -227,6 +228,8 @@ If (A_ThisMenuItemPos = 1) {
 	 Run C:\Users\pavel\GitHub\LIbrary\Other\Snip\Snippets.png
 }else if (A_ThisMenuItemPos = 12) {
 	 Run C:\Users\pavel\GitHub\LIbrary\CommandPrompt\commandShell.cs
+}else if (A_ThisMenuItemPos = 13) {
+	 Run C:\Users\pavel\GitHub\LIbrary\English\Life\Life.cs
 }
 return
 
@@ -408,9 +411,9 @@ return
 
 MainMenuVisual1:
 If (A_ThisMenuItemPos = 1) {
-	Run C:\Users\pavel\GitHub\LIbrary\DataType\string\String.cs
+	Run C:\Users\pavel\GitHub\LIbrary\Framework\React\Component.cs
 } else if (A_ThisMenuItemPos = 2) {
-	Run C:\Users\pavel\GitHub\LIbrary\DataType\cast\Cast.cs
+	Run C:\Users\pavel\GitHub\LIbrary\Framework\React\Hook.cs
 } else if (A_ThisMenuItemPos = 3) {
 	MsgBox, you press button 3
 }
