@@ -1107,7 +1107,7 @@ Return
 send,{LShift down}{f5}{LShift up}
 Return
 XButton1::LControl
-; \::Enter
+\::Enter
 #IfWinActive
 
 

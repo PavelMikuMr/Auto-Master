@@ -14,51 +14,44 @@ SetKeyDelay, -1, -1, -1  ; умешьшает задержки
 SendMode Input ; самый быстрый метод отправки из SendEvent-by default,  SendInput and SendPlay
 SetTitleMatchMode 2
 SetTitleMatchMode Fast
-
+#NoTrayIcon
 ;----------------------------------Glabal Setting--------------------------------
-Speed := 100 
-Speedmin := 10 
-
-Alt::
-If WinActive("ahk_group AltTabWindow") {
-  j::ShiftAltTab
-  l::AltTab
-  
-}
-Return
-
 
 Home & 1::f1
+return
+
 Home & 2::f2
+return
+
 Home & 3::f3
+return
+
 Home & 4::f4
+return
+
+
 Home & 5::f5
+return
+
 Home & 6::f6
+return
+
 Home & 7::f7
+return
+
 Home & 8::f8
+return
+
 Home & 9::f9
+return
+
 Home & 0::f10
+return
+
 Home & -::f11
+return
+
 Home & =::f12
-Home & w::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", -Speed, "UInt", 0, "UPtr", 0)
-Home & s::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", Speed, "UInt", 0, "UPtr", 0)
-Home & a::DllCall("mouse_event", "UInt", 0x0001, "Int", -Speed, "Int", 0, "UInt", 0, "UPtr", 0)
-Home & d::DllCall("mouse_event", "UInt", 0x0001, "Int", Speed, "Int", 0, "UInt", 0, "UPtr", 0)
-Home & o::WheelUp
-Home & l::WheelDown
-Home & k::click
-Home & `;::click, Right
-
-#if GetKeyState("alt", "P")
-Home & o::!WheelUp
-Home & l::!WheelDown
-Return
-
-#if GetKeyState("Shift", "P")
-Home & w::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", -Speedmin, "UInt", 0, "UPtr", 0)
-Home & s::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", Speedmin, "UInt", 0, "UPtr", 0)
-Home & a::DllCall("mouse_event", "UInt", 0x0001, "Int", -Speedmin, "Int", 0, "UInt", 0, "UPtr", 0)
-Home & d::DllCall("mouse_event", "UInt", 0x0001, "Int", Speedmin, "Int", 0, "UInt", 0, "UPtr", 0)
-Return
+return
 
 

@@ -1,8 +1,4 @@
-﻿#NoEnv ; рекомендуется для всех скриптов
-#MaxHotkeysPerInterval 99000000 ; не останавливает скрипт и выводит ненужные сообщения
-#HotkeyInterval 99000000 ; тоже
-#KeyHistory 0 ; отключает ненужную регистрацию ключей
-#SingleInstance, Force
+﻿#SingleInstance, Force
 ListLines Off ; отключает ненужную регистрацию ключей
 Process, Priority, , H ; вроде как должно повысить производительность. если проблемы то вырубить
 SetWinDelay, 0 ; умешьшает задержки
@@ -19,15 +15,6 @@ SetTitleMatchMode Fast
 Speed := 100 
 Speedmin := 10 
 
-Alt::
-If WinActive("ahk_group AltTabWindow") {
-  j::ShiftAltTab
-  l::AltTab
-  
-}
-Return
-
-
 Home & 1::f1
 Home & 2::f2
 Home & 3::f3
@@ -40,6 +27,7 @@ Home & 9::f9
 Home & 0::f10
 Home & -::f11
 Home & =::f12
+
 Home & w::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", -Speed, "UInt", 0, "UPtr", 0)
 Home & s::DllCall("mouse_event", "UInt", 0x0001, "Int", 0, "Int", Speed, "UInt", 0, "UPtr", 0)
 Home & a::DllCall("mouse_event", "UInt", 0x0001, "Int", -Speed, "Int", 0, "UInt", 0, "UPtr", 0)

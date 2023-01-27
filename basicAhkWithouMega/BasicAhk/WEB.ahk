@@ -14,7 +14,7 @@ SetKeyDelay, -1, -1, -1  ; умешьшает задержки
 SendMode Input ; самый быстрый метод отправки из SendEvent-by default,  SendInput and SendPlay
 SetTitleMatchMode 2
 SetTitleMatchMode Fast
-MEGA:= "C:\Users\pavel\Documents\MEGAsync\library\Redux\"
+
 ;----------------------------------Glabal Setting--------------------------------
 
 
@@ -189,32 +189,31 @@ return
 
 MainMenuLabel:
 If (A_ThisMenuItemPos = 1) {
-	MsgBox, folder is free
+	Run C:\Users\pavel\GitHub\LIbrary\BasicPart\String.Operatros.Metods\String.Operatros.Metods.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\HTML\Basic\Basic.xml
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\HTML\Basic\Basic.xml
 	
 }else if (A_ThisMenuItemPos = 3) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\Basic\CssBasic.xml
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\Basic\CssBasic.xml
 }else if (A_ThisMenuItemPos = 4) {
-	 Run %MEGA%JavaScript\Array\Array.cs
+	 Run C:\Users\pavel\GitHub\LIbrary\Array\Array.cs
 }else if (A_ThisMenuItemPos = 5) {
-	 Run %MEGA%JavaScript\Other\Recursia\Recursia.cs
+	 Run C:\Users\pavel\GitHub\LIbrary\Other\Recursia\Recursia.cs
 }else if (A_ThisMenuItemPos = 6) {
-	 Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\googleSeach\google.cs
+	 Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\googleSeach\google.cs
 }else if (A_ThisMenuItemPos = 7) {
 	 Run G:\GlobalLibrary\ShaderLibrary\Afina\TriPlanarMaterial\Radius.png
 }else if (A_ThisMenuItemPos = 8) {
-	 Run G:\GlobalLibrary\ShaderLibrary\JavaScript\Other\ChanellPacking\AdvanceWorkChannel.png
+	 Run G:\GlobalLibrary\ShaderLibrary\Other\ChanellPacking\AdvanceWorkChannel.png
 }else if (A_ThisMenuItemPos = 9) {
-	 Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\ones$tens\Rem.txt
+	 Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\ones$tens\Rem.txt
 }else if (A_ThisMenuItemPos = 10) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\ones$tens\Rem.txt
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\ones$tens\Rem.txt
 }
 else if (A_ThisMenuItemPos = 11) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\CssLifeHack\goodvalue.cs
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\goodvalue.cs
 }
 return
-
 
 
 MenuHandler:
@@ -222,119 +221,119 @@ return
 
 SubMenu1Label:
 If (A_ThisMenuItemPos = 1) {
-	Run, %MEGA%JavaScript\Loop\While\Whilel.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\Loop\While\Whilel.cs
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%JavaScript\Loop\DoWhile\DoWhile.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\Loop\DoWhile\DoWhile.cs
 }else if (A_ThisMenuItemPos = 3) {
-	Run, %MEGA%JavaScript\Loop\For\For.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\Loop\For\For.cs
 }else if (A_ThisMenuItemPos = 4) {
-	Run, %MEGA%JavaScript\Loop\InsertLoop\Nestedloop.cpp
+	Run, C:\Users\pavel\GitHub\LIbrary\Loop\InsertLoop\Nestedloop.cpp
 }
 return
 
 SubMenu2Label:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%JavaScript\LogicOperators\Switch.cs
+	Run C:\Users\pavel\GitHub\LIbrary\LogicOperators\Switch.cs
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%JavaScript\LogicOperators\&.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\LogicOperators\&.cs
 }
 return
 
 SubMenu3Label:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\DisplayTools\Flexbox\flexbox.png
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\DisplayTools\Flexbox\flexbox.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\HTML\Form\AtributesTag.xml
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\HTML\Form\AtributesTag.xml
 }
 else if (A_ThisMenuItemPos = 3) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\DisplayTools\Flexbox\basis.png
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\DisplayTools\Flexbox\basis.png
 }
 else if (A_ThisMenuItemPos = 4) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\DisplayTools\Position.png
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\DisplayTools\Position.png
 }
 else if (A_ThisMenuItemPos = 5) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\DisplayTools\Grid\Grid.png
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\DisplayTools\Grid\Grid.png
 }
 else if (A_ThisMenuItemPos = 6) {
-	Run, %MEGA%JavaScript\Array\ArrayMetods.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\Array\ArrayMetods.cs
 }
 return
 
 
 SubMenu4Label:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\Prepros\Pug\Pug.png
+	Run C:\Users\pavel\GitHub\LIbrary\Prepros\Pug\Pug.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\Prepros\Pug\PugBase.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\Prepros\Pug\PugBase.cs
 }
 else if (A_ThisMenuItemPos = 3) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\Prepros\Scss\Scss.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\Prepros\Scss\Scss.cs
 }
 return
 
 
 SubMenu5Label:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%JavaScript\Other\JSON\Json.cs
+	Run C:\Users\pavel\GitHub\LIbrary\Other\JSON\Json.cs
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%JavaScript\LogicOperators\&.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\LogicOperators\&.cs
 }
 return
 
 SubMenu6Label:
 If (A_ThisMenuItemPos = 1) {
-	Run  %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\HTML\Elemnts\Elements.png
+	Run  C:\Users\pavel\GitHub\LIbrary\HTML.SCC\HTML\Elemnts\Elements.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%CommandPrompt\NodeJS.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\CommandPrompt\NodeJS.cs
 }
 return
 
 SubMenu7Label:
 If (A_ThisMenuItemPos = 1) {
-	Run  %MEGA%GitHub\GIT\GIT.mp4
+	Run  C:\Users\pavel\GitHub\LIbrary\GIT\GIT.mp4
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%GitHub\GIT\GItPrompt.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\GIT\GItPrompt.cs
 }
 return
 
 SubMenu8Label:
 If (A_ThisMenuItemPos = 1) {
-	Run  %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\CssLifeHack\VerticalIline.png
+	Run  C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\VerticalIline.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run, %MEGA%GitHub\GIT\GItPrompt.cs
+	Run, C:\Users\pavel\GitHub\LIbrary\GIT\GItPrompt.cs
 } else if (A_ThisMenuItemPos = 3) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\Verstka\DifferentUsefulthings\things.png
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\DifferentUsefulthings\things.png
 
 } else if (A_ThisMenuItemPos = 4) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\CssLifeHack\Flist.jpg
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\Flist.jpg
 
 } else if (A_ThisMenuItemPos = 5) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\CssLifeHack\free.jpg
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\free.jpg
 
 
 } else if (A_ThisMenuItemPos = 6) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\CssLifeHack\free.jpg
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\free.jpg
 
 
 } else if (A_ThisMenuItemPos = 7) {
-	Run, %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\SCC\CssLifeHack\free.jpg
+	Run, C:\Users\pavel\GitHub\LIbrary\HTML.SCC\SCC\CssLifeHack\free.jpg
 }
 return
 
 SubMenu9Label:
 If (A_ThisMenuItemPos = 1) {
-	Run  %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\Verstka\Laborghini\Laborghini.png
+	Run  C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\Laborghini\Laborghini.png
 } else if (A_ThisMenuItemPos = 2) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\Verstka\pray\Elements.png
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\pray\Elements.png
 } else if (A_ThisMenuItemPos = 3) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\HTML.SCC\Verstka\pray\js.png
+	Run C:\Users\pavel\GitHub\LIbrary\HTML.SCC\Verstka\pray\js.png
 }
 return
 ;---------------------------------------
 
 MainMenuStudio1:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%HTML-CSS-PREPROCESSOR\WebLibraries\HtmlElementsRules\form.input\form.png
+	Run C:\Users\pavel\GitHub\LIbrary\WebLibraries\HtmlElementsRules\form.input\form.png
 } else if (A_ThisMenuItemPos = 2) {
 	Run G:\GlobalLibrary\ShaderLibrary\AutumnHouse\BlueCode\Road\BP_RoadSpline-UserConstructionScript.png
 } else if (A_ThisMenuItemPos = 3) {
@@ -357,17 +356,17 @@ return
 
 MainMenuStudio3:
 If (A_ThisMenuItemPos = 1) {
-	Run	%MEGA%JavaScript\Class.Object.Metods\Ref.Value.Stack\Ref.Value.Stack.cs
+	Run	C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Ref.Value.Stack\Ref.Value.Stack.cs
 } else if (A_ThisMenuItemPos = 2) {
-	Run %MEGA%JavaScript\Class.Object.Metods\Ref.Value.Stack\Null.cs
+	Run C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Ref.Value.Stack\Null.cs
 } else if (A_ThisMenuItemPos = 3) {
-	Run %MEGA%JavaScript\Class.Object.Metods\Ref.Value.Stack\InParam.cs
+	Run C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Ref.Value.Stack\InParam.cs
 }
 return
 
 MainMenuStudio4:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%JavaScript\Class.Object.Metods\Object\Object.cs
+	Run C:\Users\pavel\GitHub\LIbrary\Class.Object.Metods\Object\Object.cs
 } else if (A_ThisMenuItemPos = 2) {
 	MsgBox, you press button 2
 } else if (A_ThisMenuItemPos = 3) {
@@ -377,7 +376,7 @@ return
 
 MainMenuStudio5:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%DataType\Convert.cs
+	Run C:\Users\pavel\GitHub\LIbrary\DataType\Convert.cs
 } else if (A_ThisMenuItemPos = 2) {
 	MsgBox, you press button 2
 } else if (A_ThisMenuItemPos = 3) {
@@ -391,7 +390,7 @@ return
 
 MainMenuVisual1:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%DataType\string\String.cs
+	Run C:\Users\pavel\GitHub\LIbrary\DataType\string\String.cs
 } else if (A_ThisMenuItemPos = 2) {
 	Run G:\GlobalLibrary\ShaderLibrary\AutumnHouse\BlueCode\Road\BP_RoadSpline-UserConstructionScript.png
 } else if (A_ThisMenuItemPos = 3) {
@@ -431,7 +430,7 @@ return
 
 MainMenuVisual5:
 If (A_ThisMenuItemPos = 1) {
-	Run %MEGA%DataType\Convert.cs
+	Run C:\Users\pavel\GitHub\LIbrary\DataType\Convert.cs
 } else if (A_ThisMenuItemPos = 2) {
 	MsgBox, you press button 2
 } else if (A_ThisMenuItemPos = 3) {
